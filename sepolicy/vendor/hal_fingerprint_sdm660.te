@@ -37,3 +37,13 @@ vndbinder_use(hal_fingerprint_sdm660)
 
 dontaudit hal_fingerprint_sdm660 { media_rw_data_file sdcardfs}:dir search;
 dontaudit hal_fingerprint_sdm660 media_rw_data_file:dir { read open };
+
+dontaudit hal_fingerprint_sdm660 mnt_user_file:dir search;
+dontaudit hal_fingerprint_sdm660 mnt_user_file:lnk_file read;
+
+dontaudit hal_fingerprint_sdm660 sdcardfs:dir search;
+
+dontaudit hal_fingerprint_sdm660 media_rw_data_file:dir search;
+
+dontaudit hal_fingerprint_sdm660 storage_file:lnk_file read;
+dontaudit hal_fingerprint_sdm660 storage_file:dir search;
